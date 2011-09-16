@@ -274,6 +274,7 @@
 - (void)toggleShouldTileLimit
 {
     BOOL newLimit = ![canvas limit];
+    [view setAutoresizingMask:NSViewNotSizable];
     [canvas setLimit:newLimit];
     [view setLimit:newLimit];
     limit = newLimit;
