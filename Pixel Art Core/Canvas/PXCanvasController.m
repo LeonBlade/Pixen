@@ -262,7 +262,7 @@
 {
 	BOOL newWraps = ![canvas wraps];
 	[canvas setWraps:newWraps];
-	if (newWraps)
+	if (newWraps && ![canvas limit])
 		[view setAutoresizingMask:NSViewWidthSizable | NSViewHeightSizable];
 	else
 		[view setAutoresizingMask:NSViewNotSizable];		
