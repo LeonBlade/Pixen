@@ -35,6 +35,7 @@
 
 	id delegate;
 	BOOL wraps; // used in setCanvas
+    BOOL limit; // used in sizeToCanvas
 }
 
 @property (nonatomic, assign) id delegate;
@@ -64,6 +65,7 @@
 - (PXBackground *)defaultAlternateBackground;
 - (void)setDefaultAlternateBackground:(PXBackground *)bg;
 - (void)toggleShouldTile;
+- (void)toggleShouldTileLimit;
 - (void)setPatternToSelection;
 - (void)showBackgroundInfo;
 - (void)showGridSettings;

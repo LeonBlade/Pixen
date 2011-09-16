@@ -31,6 +31,8 @@
 - (BOOL)wraps;
 - (void)setWraps:(BOOL)newWraps;
 - (void)setWraps:(BOOL)newWraps suppressRedraw:(BOOL)suppress;
+- (BOOL)limit;
+- (void)setLimit:(BOOL)newLimit;
 - (void)changedInRect:(NSRect)rect;
 - (void)changed;
 

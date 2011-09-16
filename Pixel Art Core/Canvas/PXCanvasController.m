@@ -271,6 +271,14 @@
 	wraps = newWraps;
 }
 
+- (void)toggleShouldTileLimit
+{
+    BOOL newLimit = ![canvas limit];
+    [canvas setLimit:newLimit];
+    [view setLimit:newLimit];
+    limit = newLimit;
+}
+
 - (NSScrollView *)scrollView
 {
 	return scrollView;

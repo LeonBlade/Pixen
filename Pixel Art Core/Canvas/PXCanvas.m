@@ -102,6 +102,7 @@
 	grid = [[PXGrid alloc] init];
 	bgConfig = [[PXBackgroundConfig alloc] init];
 	wraps = NO;
+    limit = NO;
 	drawnPoints = nil;
 	oldColors = nil;
 	newColors = nil;

@@ -34,6 +34,17 @@
 	[self setWraps:newWraps suppressRedraw:NO];
 }
 
+- (BOOL)limit
+{
+    return limit;
+}
+
+- (void)setLimit:(BOOL)newLimit
+{
+    limit = newLimit;
+    [self changed];
+}
+
 - (BOOL)containsPoint:(NSPoint)aPoint
 {
 	return wraps || NSPointInRect(aPoint, canvasRect);

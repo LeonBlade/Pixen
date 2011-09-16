@@ -26,6 +26,7 @@
 	BOOL shouldDrawGrid;
 	
 	BOOL drawsWrappedCanvases;
+    BOOL limitTile;
 	BOOL drawsToolBeziers;
 	BOOL acceptsFirstMouse;
 	
@@ -62,6 +63,7 @@
 - (void)setDrawsWrappedCanvases:(BOOL)drawsWrappedCanvases;
 - (void)setShouldDrawSelectionMarquee:(BOOL)drawsSelectionMarquee;
 - (void)setNeedsDisplayInCanvasRect:(NSRect)rect;
+- (void)setLimit:(BOOL)newLimit;
 - (void)sizeToCanvas;
 - (void)centerOn:(NSPoint)aPoint;
 - (NSAffineTransform *)setupTransform;

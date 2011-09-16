@@ -265,6 +265,11 @@
 	[canvasController toggleShouldTile];
 }
 
+- (IBAction) shouldTileLimit: (id) sender
+{
+    [canvasController toggleShouldTileLimit];
+}
+
 - (IBAction)setPatternToSelection:sender
 {
 	[canvasController setPatternToSelection];

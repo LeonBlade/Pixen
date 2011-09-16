@@ -216,6 +216,12 @@ void PXDebugRect(NSRect r, float alpha)
 	centeredPoint = [self convertFromViewToCanvasPoint:aPoint];
 }
 
+- (void)setLimit:(BOOL)newLimit
+{
+    limitTile = newLimit;
+    [self sizeToCanvas];
+}
+
 - (void)sizeToCanvas
 {
 	
@@ -230,8 +236,17 @@ void PXDebugRect(NSRect r, float alpha)
 	if ([canvas wraps] && drawsWrappedCanvases)
 	{
 		transformedSize = [transform transformSize:[canvas size]];
-		transformedSize.width = MAX(transformedSize.width, NSWidth([[self superview] frame]));
-		transformedSize.height = MAX(transformedSize.height, NSHeight([[self superview] frame])); 
+        // if we are limiting our tiling then we want to set the width and height three times over so that we get a 3 by 3 tiled block
+        if (limitTile)
+        {
+            transformedSize.width *= 3;
+            transformedSize.height *= 3;
+        }
+        else
+        {
+            transformedSize.width = MAX(transformedSize.width, NSWidth([[self superview] frame]));
+            transformedSize.height = MAX(transformedSize.height, NSHeight([[self superview] frame])); 
+        }
 	}
 	else
 	{

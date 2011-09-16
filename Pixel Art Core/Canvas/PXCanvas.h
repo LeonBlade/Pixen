@@ -38,6 +38,7 @@ typedef BOOL * PXSelectionMask;
 	PXBackgroundConfig *bgConfig;
 	PXGrid *grid;
 	BOOL wraps;
+    BOOL limit;
 	NSSize previewSize;
   
   BOOL frequencyPaletteDirty;

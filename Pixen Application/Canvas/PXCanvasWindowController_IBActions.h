@@ -34,7 +34,8 @@
 - (IBAction)duplicateLayer:(id) sender;
 - (IBAction)nextLayer:(id) sender;
 - (IBAction)previousLayer:(id) sender;
-- (IBAction) shouldTileToggled: (id) sender;
+- (IBAction)shouldTileToggled: (id) sender;
+- (IBAction)shouldTileLimit: (id) sender;
 - (IBAction)setPatternToSelection:sender;
 - (IBAction)showPreviewWindow:(NSEvent *) sender;
 - (IBAction)togglePreviewWindow: (id) sender;
